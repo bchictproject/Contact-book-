@@ -1,8 +1,7 @@
 # Contact-book
-Project Description
 The Contact Book is a simple web application that allows users to store and manage personal contacts. Users can add, view, edit, delete, and search for contacts.
 
-## Project Requirements
+## contact book Application 
 
 1. Users can add a new contact using full name, phone number, and email address.
 2. Users can display and view all saved contacts.
