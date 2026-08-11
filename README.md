@@ -61,8 +61,8 @@ Output: Invalid information is rejected and an error message is displayed.
 
 ## Technologies Used
 
-- HTML
-- CSS
-- JavaScript
-- Local Storage
+- HTMLHTML5: Semantic markup structure.
+- CSS3:Custom CSS layout,Flexbox,CSS Grid and responsive styling matching the design layout.
+- JavaScript (ES6+): Object—Oriented programming(OOP) using ES6 classes(contact and Contact Manager).
+- Web Storage API: Browser Local Storage for data persistence
 - Git and GitHub
