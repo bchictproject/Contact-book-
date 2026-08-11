@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Book Application</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Lucide Icons Library -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="app-header">
+    <div class="header-left">
+      <i data-lucide="contact-round" class="header-icon"></i>
+      <h1>Contact Book</h1>
+    </div>
+    <div class="header-right">
+      <div class="saved-badge">
+        <i data-lucide="save"></i>
+        <span>Saved Locally</span>
+        <i data-lucide="check-circle-2" class="check-icon"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Application Dashboard -->
+  <main class="app-container">
+    
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <button class="nav-btn active">
+          <i data-lucide="users"></i> All Contacts
+        </button>
+        <button class="nav-btn">
+          <i data-lucide="user-plus"></i> Add Contact
+        </button>
+        <button class="nav-btn">
+          <i data-lucide="search"></i> Search Contacts
+        </button>
+        <button class="nav-btn">
+          <i data-lucide="info"></i> About
+        </button>
+      </nav>
+
+      <div class="sidebar-card">
+        <div class="card-header">
+          <i data-lucide="database"></i>
+          <strong>Local Storage</strong>
+        </div>
+        <p>Your contacts are saved locally in this browser.</p>
+        <p class="total-count-text">Total Contacts: <span id="total-contacts-count">0</span></p>
+      </div>
+    </aside>
+
+    <!-- Center Content: Contacts List -->
+    <section class="main-content">
+      <div class="content-header">
+        <h2>All Contacts</h2>
+        <button id="add-new-btn" class="btn btn-primary">
+          <i data-lucide="plus"></i> Add New Contact
+        </button>
+      </div>
+
+      <div class="search-box">
+        <i data-lucide="search" class="search-icon"></i>
+        <input type="text" id="search-input" placeholder="Search contacts by name...">
+      </div>
+
+      <div id="contacts-list" class="contacts-list">
+        <!-- Dynamic contact cards will be injected here via JavaScript -->
+      </div>
+    </section>
+
+    <!-- Right Sidebar: Add / Edit Form Panel -->
+    <aside class="form-panel">
+      <h2 id="form-title">Add / Edit Contact</h2>
+
+      <form id="contact-form" novalidate>
+        <input type="hidden" id="contact-id">
+
+        <div class="form-group">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" placeholder="Enter full name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone-number">Phone Number</label>
+          <input type="tel" id="phone-number" placeholder="Enter phone number" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email-address">Email Address</label>
+          <input type="email" id="email-address" placeholder="Enter email address" required>
+        </div>
+
+        <!-- Validation Rules Card -->
+        <div class="validation-card">
+          <h3>Validation Rules</h3>
+          <ul>
+            <li>Name cannot be empty</li>
+            <li>Phone number must be 10–15 digits</li>
+            <li>Email must be a valid email address</li>
+          </ul>
+        </div>
+
+        <button type="submit" id="save-btn" class="btn btn-primary btn-full">
+          <i data-lucide="save"></i> Save Contact
+        </button>
+
+        <button type="button" id="clear-btn" class="btn btn-outline btn-full">
+          <i data-lucide="rotate-ccw"></i> Clear Form
+        </button>
+      </form>
+    </aside>
+
+  </main>
+
+  <!-- Footer Bar -->
+  <footer class="app-footer">
+    <p>Contact Book Application &bull; Simple. Fast. Secure.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
